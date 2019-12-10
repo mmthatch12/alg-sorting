@@ -20,9 +20,25 @@ print(selection_sort(arr1))
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    swap = True
+    while swap:
+        swap = False
+        for i in range(0, len(arr) - 1):
+            if arr[i] > arr[i+1]:
+                temp = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = temp
+                swap = True
 
-     return arr
+            
+    
+    # Loop through your array
+    #     Compare each element to its neighbor
+    #     If elements in wrong position (relative to each other, swap them)
+    # If no swaps performed, stop. Else, go back to the element at index 0 and repeat step 1.
+    return arr
 
+print(bubble_sort(arr1))
 
 # STRETCH: implement the Count Sort function below
 # def count_sort( arr, maximum=-1 ):
