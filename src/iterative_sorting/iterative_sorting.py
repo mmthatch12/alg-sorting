@@ -9,9 +9,8 @@ def selection_sort( arr ):
             if arr[smallest_index] > arr[x]:
                 smallest_index = x
         
-        temp = arr[smallest_index]
-        arr[smallest_index] = arr[cur_index]
-        arr[cur_index] = temp
+       
+        arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]
 
     return arr
 

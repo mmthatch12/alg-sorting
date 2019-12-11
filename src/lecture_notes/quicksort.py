@@ -5,9 +5,9 @@ def partition(data):
     right = []
     for i in data[1:]:
         if i <= pivot:
-            left.append(v)
+            left.append(i)
         else:
-            right.append(v)
+            right.append(i)
 
     return left, [pivot], right
 
