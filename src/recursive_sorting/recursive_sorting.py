@@ -6,20 +6,18 @@ def merge( arrA, arrB ):
     
     #3. Start merging your single lists of one element together into larger, sorted sets
     for i in range(0, len(merged_arr)):
-        if not arrA:
+        if len(arrA) == 0:
             merged_arr[i] = arrB[0]
             del arrB[0]
-        elif not arrB:
+        elif len(arrB) == 0:
             merged_arr[i] = arrA[0]
             del arrA[0]
         elif arrA[0] >= arrB[0]:
            merged_arr[i] = arrB[0]
-           print('merged_arr', merged_arr)
            del arrB[0]
         else:
             merged_arr[i] = arrA[0]
             del arrA[0]
-    print("MG return=",merged_arr)
     return merged_arr
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
