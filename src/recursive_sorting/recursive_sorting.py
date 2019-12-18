@@ -20,6 +20,7 @@ def merge( arrA, arrB ):
             del arrA[0]
     return merged_arr
 
+
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     
@@ -27,8 +28,8 @@ def merge_sort( arr ):
         return arr
     
     #1. While your data set contains more than one item, split it in half
-    arrB = arr[len(arr)//2:]
     arrA = arr[:len(arr)//2]
+    arrB = arr[len(arr)//2:]
     #2. Once you have gotten down to a single element, you have also *sorted* that element 
     #(a single element cannot be "out of order")
     arrA = merge_sort(arrA)
