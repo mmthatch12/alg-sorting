@@ -19,3 +19,15 @@ function threeNumberSum(arr, target) {
     
 }
 console.log(threeNumberSum([12,3,1,2,-6,5,0,-8,-1,6,-5], 0))
+
+function getEquivalent(note) {
+	let nob = {'C#': 'Db', 'D#': 'Eb', 'F#': 'Gb', 'G#': 'Ab', 'A#': 'Bb', 'Db': 'C#', 'Eb': 'D#', 'Gb': 'F#', 'Ab': 'G#', 'Bb': 'A#'}
+
+  for(let item in nob){
+    if(nob[item] == note){
+      return item
+    }
+  }
+}
+
+console.log(getEquivalent('Db'))
