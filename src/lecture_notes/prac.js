@@ -31,3 +31,30 @@ function getEquivalent(note) {
 }
 
 console.log(getEquivalent('Db'))
+
+function hasValidPrice(product) {
+	
+	if(product){
+		let holder = product.price
+		if(typeof holder == 'number'){
+			if(product.price >= 0){
+				return true
+			}else{
+				return false
+			}
+		}else{
+			return false
+		}
+	} else{
+		return false
+	}
+  
+}
+
+Test.assertEquals(hasValidPrice({ "product": "Milk", price: 1.50 }), true)
+Test.assertEquals(hasValidPrice({ "product": "Cheese", price: -1 }), false)
+Test.assertEquals(hasValidPrice({ "product": "Eggs", price: 0 }), true)
+Test.assertEquals(hasValidPrice({ "product": "Flour" }), false)
+Test.assertEquals(hasValidPrice({ "product": "Cerials", price: '3.0' }), false)
+Test.assertEquals(hasValidPrice({ "product": "Beer", price: NaN }), false)
+Test.assertEquals(hasValidPrice(), false)
