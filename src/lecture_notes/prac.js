@@ -58,3 +58,21 @@ Test.assertEquals(hasValidPrice({ "product": "Flour" }), false)
 Test.assertEquals(hasValidPrice({ "product": "Cerials", price: '3.0' }), false)
 Test.assertEquals(hasValidPrice({ "product": "Beer", price: NaN }), false)
 Test.assertEquals(hasValidPrice(), false)
+
+function capLast(txt) {
+	let splity = txt.split(' ')
+  let nespl = []
+  let ite = null
+  let oth = ''
+  for(let i=0;i<splity.length;i++){
+    ite = splity[i].split('')
+    ite[ite.length-1] = ite[ite.length-1].toUpperCase()
+    console.log(ite)
+    oth = ite.join("")
+    nespl.push(oth)
+    console.log(oth)
+  }
+  return nespl.join(' ')
+
+}
+console.log(capLast("My Name Is Edabit"))
