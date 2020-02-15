@@ -76,3 +76,15 @@ function capLast(txt) {
 
 }
 console.log(capLast("My Name Is Edabit"))
+
+function clearFog(str) {
+	let splity = str.split('')
+	let filted = splity.filter(item => item !== "f" && item !== "o" && item !== "g")
+  let last = filted.join('')
+  if(last.length == str.length){
+    return "It's a clear day!"
+  }else{
+  return last
+  }
+}
+console.log(clearFog("fogfogfffoooofftreesggfoogfog"))
