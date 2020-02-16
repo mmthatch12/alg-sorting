@@ -88,3 +88,12 @@ function clearFog(str) {
   }
 }
 console.log(clearFog("fogfogfffoooofftreesggfoogfog"))
+
+function findLargestNums(arr) {
+	let finarr = []
+  for(let i = 0;i<arr.length;i++){
+    finarr.push(Math.max(...arr[i]))
+  }
+  return finarr
+}
+console.log(findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]))
