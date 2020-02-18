@@ -97,3 +97,15 @@ function findLargestNums(arr) {
   return finarr
 }
 console.log(findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]))
+
+
+function indexMultiplier(arr) {
+	let mapy = arr.map((num, ind) => num*ind)
+	let rudy = mapy.reduce((cur,acc) => cur+acc)
+	if(arr.length == 0){
+		return 0
+	} else {
+		return rudy
+	}
+}
+console.log(indexMultiplier([-3, 0, 8, -6]))
