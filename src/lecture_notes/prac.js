@@ -109,3 +109,7 @@ function indexMultiplier(arr) {
 	}
 }
 console.log(indexMultiplier([-3, 0, 8, -6]))
+
+function convert(hours, minutes) {
+	return (hours*60)*60 + (minutes*60)
+}
